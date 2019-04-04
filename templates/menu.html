@@ -1,0 +1,31 @@
+<html>
+	
+<head>
+    <title> Menu Page</title>
+    </head>
+    
+	<body>
+        <h1>{{restaurant.name}} Menu Page</h1>
+        
+        <!-- For loop logic of jinja template -->
+        {%for item in items%} 
+        
+            <li> {{item.name}} {{item.course}}{{item.id}}{{item.description}}
+                <a href={{ url_for('edititem' ,restaurant_id=restaurant.id , item_id = item.id) }}>Edit</a>
+                <a href={{ url_for('deleteitem' ,restaurant_id=restaurant.id , item_id = item.id) }}>Delete</a>
+                
+
+            </li> 
+        
+        {%endfor%} 
+        
+        <br>
+        <a href={{ url_for('newitem' ,restaurant_id=restaurant.id ) }}>addd to {{restaurant.name}}</a>
+        <br>
+        <br>
+        <a href="/restaurants">Go to the Restaurants Page</a>
+        
+
+	</body>
+
+</html>

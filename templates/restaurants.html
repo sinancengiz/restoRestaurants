@@ -1,0 +1,27 @@
+<html>
+	
+<head>
+    <title> Restaurants Page</title>
+    </head>
+    
+	<body>
+        <h1>Restaurants Page</h1>
+        <br>
+
+        <ul> 
+            <!-- For loop logic of jinja template -->
+            {%for res in restaurants%} 
+              
+                <li><a href={{ url_for('menu' ,restaurant_id=res.id) }}>{{res.name}}</a>  </li> 
+            {%endfor%} 
+              
+            </ul> 
+        <br>
+        <br>
+        <a href={{ url_for('newrestaurant'  ) }}>Create New Restaurant</a>
+        <br>
+
+        <a href="/index"> Go to the main page</a>
+	</body>
+
+</html>
