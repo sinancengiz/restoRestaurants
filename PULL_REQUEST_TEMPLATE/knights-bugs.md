@@ -1,4 +1,7 @@
-**Kinghts Bugs**
+
+
+**Kinghts Bugs Template**
+
 
 **Acceptance Criteria:** 
 
